@@ -11,9 +11,9 @@ ones using auditory and visual stimuli.
 The names of the people displayed in the repository aren't real * but appropriately are associated with that person's
 data.
 
-| First Header  | Second Header |
+| Section  | Algorithm |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Songs  | KNN Minkowski  |
+| Visual  | Quadratic SVM  |
 
 Most popular names in West Virginia in the year 2018 if anyone is interested
