@@ -8,9 +8,12 @@ Cyton headset.
 As of now, the data can be divided into three subsets: endogenous stimuli (or without an external stimuli), exogenous
 ones using auditory and visual stimuli. 
 
-The names of the people displayed in the repository aren't real*j* but appropriately are associated with that person's
-data. 
+The names of the people displayed in the repository aren't real * but appropriately are associated with that person's
+data.
 
+| Section  | Algorithm |
+| ------------- | ------------- |
+| Songs  | KNN Minkowski  |
+| Visual  | Quadratic SVM  |
 
-
-* Most popular names in West Virginia in the year 2018 if anyone is interested
+Most popular names in West Virginia in the year 2018 if anyone is interested
