@@ -1,8 +1,16 @@
+#sklearn modules
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import classification_report, confusion_matrix
+
+#pandas
 import pandas as pd
-import numpy as np
+
+#data visualization
+import seaborn as sn
+import matplotlib.pyplot as plt
+
 
 #importing training data
 dir = "/Users/owner/Documents/GitHub/OpenEEGAlgo/EEG Recordings/Songs/"
@@ -26,16 +34,24 @@ noah_opop_1.insert(16, 16, 2)
 noah_over_1.insert(16, 16, 3)
 noah_se8_1.insert(16, 16, 4)
 
+#inserting indicators for test data
+noah_dukas_2.insert(16, 16, 0)
+noah_esp3_2.insert(16, 16, 1)
+noah_opop_2.insert(16, 16, 2)
+noah_over_2.insert(16, 16, 3)
+noah_se8_2.insert(16, 16, 4)
+
+#concatenating dataset
 trainData = pd.concat([noah_dukas_1, noah_esp3_1, noah_opop_1, noah_over_1, noah_se8_1]).values
 testData = pd.concat([noah_dukas_2, noah_esp3_2, noah_opop_2, noah_over_2, noah_se8_2]).values
 
-#preprocessing test data
+#preprocessing train data
 X_train = trainData[:, :-1] #data
 Y_train = trainData[:, 16] #labels
 
-#preprocessing train data
-X_test = testData[:, :-1]
-Y_test = testData[:, 15]
+#prepreocessing test data
+X_test = trainData[:, :-1]
+Y_test = trainData[:, 16]
 
 #splitting the data into 80% train data and 20% test data
 # X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20)
@@ -48,3 +64,15 @@ X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 
 #training
+classifier = KNeighborsClassifier(n_neighbors=5)
+classifier.fit(X_train, Y_train)
+
+#predictions
+y_pred = classifier.predict(X_test)
+
+#visualize and print data
+print(confusion_matrix(Y_test, y_pred))
+print(classification_report(Y_test, y_pred))
+sn.heatmap(confusion_matrix(Y_test, y_pred))
+plt.show()
+
