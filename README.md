@@ -10,10 +10,10 @@ ones using auditory and visual stimuli.
 
 The names of the people displayed in the repository aren't real * but appropriately are associated with that person's
 data.
-|                |               |
-|----------------|---------------|
-| Songs          | KNN           |
-| Pizza          | Quadratic SVM |
-| Dogs and Trees | Linear SVM    |
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 Most popular names in West Virginia in the year 2018 if anyone is interested
