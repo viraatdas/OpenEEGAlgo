@@ -10,7 +10,7 @@ ones using auditory and visual stimuli.
 
 The names of the people displayed in the repository aren't real * but appropriately are associated with that person's
 data.
-
+|                                |
 |----------------|---------------|
 | Songs          | KNN           |
 | Pizza          | Quadratic SVM |
