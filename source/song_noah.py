@@ -34,7 +34,7 @@ noah_opop_1.insert(16, 16, 2)
 noah_over_1.insert(16, 16, 3)
 noah_se8_1.insert(16, 16, 4)
 
-#inserting indicators for test data
+#inserting indicators for test data so we can test the classifier later on
 noah_dukas_2.insert(16, 16, 0)
 noah_esp3_2.insert(16, 16, 1)
 noah_opop_2.insert(16, 16, 2)
@@ -47,11 +47,11 @@ testData = pd.concat([noah_dukas_2, noah_esp3_2, noah_opop_2, noah_over_2, noah_
 
 #preprocessing train data
 X_train = trainData[:, :-1] #data
-Y_train = trainData[:, 16] #labels
+Y_train = trainData[:, 16]  #labels
 
 #prepreocessing test data
-X_test = trainData[:, :-1]
-Y_test = trainData[:, 16]
+X_test = trainData[:, :-1]  #data
+Y_test = trainData[:, 16]   #labels
 
 #splitting the data into 80% train data and 20% test data
 # X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20)
